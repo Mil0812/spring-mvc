@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create/Update Post</title>
+</head>
+<body>
+<h1>Post Form</h1>
+<form th:action="@{/posts}" th:object="${post}" method="post">
+  <input type="text" th:field="*{title}" placeholder="Title"/>
+  <textarea th:field="*{content}" placeholder="Content"></textarea>
+  <button type="submit">Save</button>
+</form>
+<a href="/posts">Back to Posts</a>
+</body>
+</html>

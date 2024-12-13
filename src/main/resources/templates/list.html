@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Posts</title>
+</head>
+<body>
+<h1>Posts</h1>
+<ul>
+  <li th:each="post : ${posts}">
+    <a th:href="@{/posts/{id}(id=${post.id})}" th:text="${post.title}"></a>
+  </li>
+</ul>
+<a href="/posts/new">Create New Post</a>
+</body>
+</html>
